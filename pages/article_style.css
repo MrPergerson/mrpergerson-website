@@ -1,0 +1,164 @@
+.article-header {
+    background-color: #F4F4F4;
+    text-align: center;
+    padding: 66px 20px 20px 20px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.article-description {
+    margin-top: 100px;
+    min-height: 400px;
+    background-color: white;
+}
+
+.article-description--image {
+    width: 100%;
+    padding-top: 56.25%;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(.97);
+}
+
+.article-description--text {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    
+}
+
+.article-description--text--info {
+    display: block;
+    flex-basis: 250px;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+.article-description--text--text {
+    display: block;
+    flex-basis: 100px;
+    flex-grow: 1;
+    
+}
+
+.gallery-1col {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.gallery-2col {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: auto auto;
+    padding: 2em;
+    background-color: rgb(46, 46, 46);
+    
+}
+
+.gallery--item {
+    width: 100%;
+    padding-top: 75%;
+    background-position: center;
+    background-size: cover;
+}
+
+/* delete */
+.gallery-2col--item {
+    width: 100%;
+    padding-top: 75%;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 5px 10px 2px #080808;
+}
+
+.textbox {
+    padding: 20px;
+    background-color: white;
+}
+
+.textbox--title {
+    text-align: center;
+}
+
+.image-enlarged-container--background
+{
+    
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.image-enlarged-container 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+}
+
+.image-enlarged
+{
+    position: relative;
+    padding-top: 56.25%;
+
+}
+
+.testHidden {
+    display: none;
+}
+
+footer {
+    margin-top: 40px;
+    background-color: black;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    .article-description {
+        margin-top: 0px;
+    }
+
+    .article-description--text {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .article-description--text--info {
+        flex-basis: 0px;
+        padding: 0px;
+    }
+    
+    .block-container {
+        padding: 0;
+    }
+
+    footer {
+        margin-top: 0;
+    }
+ }
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
+    
+ }
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 800px) {
+       
+
+ }
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+
+ }
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {
+
+ } 

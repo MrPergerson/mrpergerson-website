@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+body
+{
+    margin: 0px;
+}
+
+header {
+    
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+header a {
+    text-align: center;
+    padding: 14px 0px;
+    text-decoration: none;
+    float:left;
+    color: black;
+    text-transform: uppercase;
+}
+
+header a:hover {
+    color: rgb(110, 110, 110);
+ }
+
+.header-right {
+    float: right;
+}
+
+.header-right a {
+    padding-left: 2em;
+}
+
+.block-container {
+    margin: auto;
+   padding: 1em 1em;
+}
+
+.nopadding {
+   padding: 0;
+}
+
+
+h1
+{
+
+    /*font-family: 'DM Serif Display', serif;*/
+    line-height: 1em;
+}
+
+h1, h2 {
+    font-family: 'Abhaya Libre', serif;
+}
+
+h3 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: normal;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.5em;
+    font-family: 'Nunito Sans', sans-serif;
+    
+}
+
+footer {
+    margin-top: 80px;
+}
+
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
+    .header-right {
+        display: none;
+    }
+
+
+    p {
+        font-size: 1em;
+        line-height: 1em;
+    }
+ }
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
+
+ }
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 800px) {
+    .header-right {
+        display: block;
+    }
+
+    .block-container {
+        width: 900px;
+
+    }
+        
+
+ }
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+
+ }
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {
+
+ } 

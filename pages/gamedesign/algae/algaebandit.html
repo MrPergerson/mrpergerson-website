@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../global_style.css" />
+    <link rel="stylesheet" href="../../article_style.css" />
+    <!--<script type="text/javascript" src="../../../node_modules/jquery/dist/jquery.js"></script>-->
+    <script type="text/javascript" src="../../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../js/article-page.js"></script>
+    <title>Algae Bandit</title>
+  </head>
+
+  <style>
+      #hero-image {
+        background-image: url('algae_1.png');
+      }
+      #background-image {
+        background-color: rgb(112, 46, 101);
+      }
+      #image1 {
+        background-image: url('algae_2.png');
+      }
+      #image2 {
+        background-image: url('algae_3.png');
+      }
+      #image3 {
+        background-image: url('algae_4.png');
+      }
+      #image4 {
+        background-image: url('algae_5.png');
+      }
+
+  </style>
+
+  <header>
+    <div class="block-container nopadding">
+      <a href="../../../index.html">MR. PERGERSON</a>
+      <div class="header-right">
+        <a href="../../gamedesign.html">GAME DESIGN</a>
+      </div>
+    </div>
+  </header>
+
+  <body id="background-image">
+    <div class="article-header">ALGAE BANDIT</div>
+    <div class="block-container">
+      <div class="article-description">
+        <div class="article-description--image" id="hero-image"></div>
+        <div class="article-description--text">
+          <p class="article-description--text--info">
+            Released: 2020 <br />
+            Medium: Video Game <br />
+            Tools: Unity <br />
+            Type: Collaborative work <br />
+          </p>
+          <p class="article-description--text--text">
+            Algae Bandit is a game about being a rogue crab who has chosen to
+            steal food from other crabs. As the player, you get to choose how
+            you want to steal food from crabs, by either using stealth or
+            beating up any crab in the way. This game was developed during the
+            summer of 2020 and was part of the Game Dev Best Practices Workshop,
+            which was hosted by the Game Dev Club at SJSU.
+          </p>
+        </div>
+      </div>
+      <div class="gallery-2col">
+        <div id="image2" class="gallery-2col--item"></div>
+        <div id="image3" class="gallery-2col--item"></div>
+        <div id="image4" class="gallery-2col--item"></div>
+        <div id="image1" class="gallery-2col--item"></div>
+      </div>
+      <div class="textbox">
+        <h2 class="textbox--title">Mechanics</h2>
+        <p>
+          Moving<br />
+          The player can use WASD to navigate the level. The movement mimics the
+          locomotion of crabs so sideways movement is faster and moving forwards
+          or backwards is slower.
+          <br /><br />
+          Attacking<br />
+          The player can attack using either the left or right arm of the crab.
+          J is tied to the left arm and K is for the right arm.
+          <br /><br />
+          Blocking<br />
+          If J and K are pressed, then the player can block any incoming attacks
+          coming from the front of the crab. Blocking doesn't protect the player
+          from the side or behind the crab. Blocking depletes stamina, which
+          regains slowly when not blocking. If there is no stamina, then the
+          player can not block.
+          <br /><br />
+          Collecting<br />
+          Throughout the level, there are algae that can be collected. To
+          collect algae, the player just needs to collide with the algae, which
+          will reduce the remaining algae in the level count.
+        </p>
+        <h2 class="textbox--title">Gameplay</h2>
+        <p>
+          The core gameplay loop of the game is collecting algae that is guarded
+          by other crabs. The goal of the game is to collect all the algae in
+          the level. The player can navigate to each algae but they must be
+          tactical when thinking about how they will approach another crab. When
+          the player approaches a crab, they must be careful to not expose their
+          back because it’s defenseless. The player can block attacks in front
+          of them but they have limited block stamina.
+        </p>
+        <h2 class="textbox--title">Level Design</h2>
+        <p>
+          I designed all the levels in the game. My design process started with
+          creating some interesting pathways. I would create different layouts
+          in Unity until I found one that could possibly create some unique
+          challenges for the player. Once the layout was finished, I would try
+          to predict the player’s pathway and create challenges along the way.
+          If I felt that the pathways to each piece of algae was too easy, I
+          would set more challenges for the player. Once done, I would test the
+          level and repeat the process until I was happy with it.
+        </p>
+        <h2 class="textbox--title">Process</h2>
+        <ol>
+          <li>
+            <p>
+              Set gameplay goal (What do I want to challenge the player with?).
+            </p>
+          </li>
+          <li><p>Create interesting base layout.</p></li>
+          <li><p>Draw the pathway that the player will likely take.</p></li>
+          <li>
+            <p>
+              Add crabs or make edits to layout to make pathway more
+              interesting.
+            </p>
+          </li>
+          <li><p>Test path way.</p></li>
+          <li><p>Repeat 2-4 until happy with whole level.</p></li>
+        </ol>
+        <h2 class="textbox--title">Concept and Design Decisions</h2>
+        <p>
+          The idea of the game was inspired by the Lybia edmondsoni crab, also
+          known as the boxer crab. It is a small crab that has stinging sea
+          anemone on its claws. The anemone resembles boxing gloves and it is
+          quite humorous when the crab is fighting another fish or crab. The
+          unconventional movement was based on the movement of the crab. This
+          was a decision that took about a month of prototyping different ideas
+          of movement. We were set on the crab-like movement earlier on but it
+          took awhile to figure out how we should orientate the camera and make
+          the controls as initiative as possible. Typically to move, games use
+          arrow or WASD keys to move. Since we wanted the player to move left
+          and right more than up and down, we decided to rotate the crab by 90
+          degrees. This allowed the players movement input to match the
+          direction of the crab while also keeping the crab moving primary
+          sideways.
+        </p>
+      </div>
+    </div>
+
+    <div class="image-enlarged-container--background">
+      <div class="image-enlarged-container">
+      </div>
+    </div>
+  </body>
+
+  <footer></footer>
+</html>

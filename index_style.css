@@ -1,0 +1,164 @@
+.header {
+    border-style: solid;
+    border-color: #e9e9e9;
+    border-width: .15em;
+    height: 3em;
+    background-color: transparent;
+    border-top-style: none;
+}
+
+.dir {
+
+    border-style: solid;
+    border-color: #e9e9e9;
+    background-color: transparent;
+    border-top-style: none;
+    border-width: .15em;
+}
+
+.container-lines {
+    position: fixed;
+    height: 100%;
+    border-style: solid;
+    border-color: #e9e9e9;
+    border-top-style: none;
+    border-bottom-style: none;
+    border-width: .15em;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1000;
+
+}
+
+.name {
+    font-size: 6em;
+    width: 5em;
+    margin: 0;
+    margin-bottom: .5em;
+}
+
+.links {
+    display: inline;
+    padding-bottom: 1em;
+}
+
+.links a {
+    color: inherit;
+}
+
+.links--dir a {
+    margin-left: 2em;
+}
+
+.links--dir {
+    font-size: 1.5em;
+}
+
+
+#about {
+    height: 100vh;
+    width: 100%;
+    background-color: transparent;
+}
+
+.about--name {
+    height: 35%;
+    background-color: #F4F4F4;
+    position: relative;
+}
+
+.about--name--text 
+{
+    position: absolute;
+    bottom: 0;
+    font-size: 3.5em;
+    margin: 0 0 10px 0;
+}
+
+.about--text-section--flex {
+    display: flex;
+}
+
+.about--text-section--image-container 
+{
+    width: 30%;
+}
+
+.about--text-section--image
+{
+    background-color: rgb(36, 36, 36);
+    width: 100%;
+    padding-top: 140%;
+    background-size: cover;
+    background-position: center;
+}
+
+.about--text-section--text
+{
+    width: 70%;
+    padding-left: 20px;
+}
+
+.about--text-section--text p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
+    .dir-center {
+        margin-top: 80px;
+        display: block;
+        left: 0;
+        top: 0;
+        transform: translate(0, 0);
+    }
+    .dir-list {
+        font-size: 1em;
+    }
+
+    .about--text-section--flex {
+        flex-direction: column;
+    }
+
+    .about--text-section--image-container 
+    {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .about--text-section--image
+    {
+        background-color: rgb(36, 36, 36);
+        width: 100%;
+        padding-top: 56%;
+    }
+
+    .about--text-section--text
+    {
+        width: 100%;
+        padding-left: 0px;
+    }
+ }
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
+
+ }
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 800px) {
+
+
+ }
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+
+ }
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {
+
+ } 

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../global_style.css" />
+    <link rel="stylesheet" href="../../article_style.css" />
+    <!--<script type="text/javascript" src="../../../node_modules/jquery/dist/jquery.js"></script>-->
+    <script type="text/javascript" src="../../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../js/article-page.js"></script>
+    <title>Grungeon</title>
+  </head>
+
+  <style>
+    #hero-image {
+      background-image: url("grungeon2.png");
+    }
+    #background-image {
+      background-image: url("tile_notseamless.png");
+    }
+    #image1 {
+      background-image: url("grungeon3.png");
+    }
+    #image2 {
+      background-image: url("grungeon4.png");
+    }
+    #image3 {
+      background-image: url("grungeon5.png");
+    }
+    #image4 {
+      background-image: url("grungeon1.png");
+    }
+  </style>
+
+  <header>
+    <div class="block-container nopadding">
+      <a href="../../../index.html">MR. PERGERSON</a>
+      <div class="header-right">
+        <a href="../../gamedesign.html">GAME DESIGN</a>
+      </div>
+    </div>
+  </header>
+
+  <body id="background-image">
+    <div class="article-header">GRUNGEON</div>
+    <div class="block-container">
+      <div class="article-description">
+        <div class="article-description--image" id="hero-image"></div>
+        <div class="article-description--text">
+          <p class="article-description--text--info">
+            Released: 2018 <br />
+            Medium: Video Game <br />
+            Tools: Unity <br />
+            Type: Collaborative work <br />
+          </p>
+          <p class="article-description--text--text">
+            Grungeon is a highly-mobile platformer with rewarding jump mechanics
+            designed to make your trip through the procedurally-generated level
+            as fluid as possible. Use the Friendly Ghosts, or the less friendly
+            Ogres and Goblins, as stepping stones to reach overhangs, or
+            purchase a limited-use jetpack from the Wizard.
+          </p>
+        </div>
+      </div>
+      <div class="gallery-2col">
+        <div id="image2" class="gallery-2col--item"></div>
+        <div id="image3" class="gallery-2col--item"></div>
+        <div id="image4" class="gallery-2col--item"></div>
+        <div id="image1" class="gallery-2col--item"></div>
+      </div>
+      <div class="textbox">
+        <h2 class="textbox--title">Mechanics</h2>
+        <h2 id="mechanics">Mechanics</h2>
+        <h4 id="primary-actions">Primary actions</h4>
+        <p>
+          Moving: Use &#39;A&#39; or &#39;D&#39; to move left or right<br />Jumping:
+          Press &#39;Space&#39; to jump in the air
+        </p>
+        <h4 id="secondary-actions">Secondary actions</h4>
+        <p>
+          Interact: Press &#39;E&#39; to interact with the shop keeper.<br />Buying:
+          Once at a shop, you can buy items using gold.<br />Splint: Press
+          &#39;Q&#39; to use the splint item.
+        </p>
+        <h4 id="objects">Objects</h4>
+        <p>
+          Walls: Can be used to jump off of.<br />Ghosts: Like walls, you can
+          jump off of the ghosts.<br />Orcs: Fast and hart hitting goblins that
+          will chase you. If the orc falls towards the player from the air, it
+          will do a ground pound, which does extra damage.<br />Flying Goblins:
+          Goblins that fly around and ignore level collisions. You can jump off
+          of these as well.<br />Dungeon door: A door that must be found and
+          unlocked with a key to escape.<br />Key: Can be collected to unlock
+          the door.<br />Gold: Collected from killing enemies.<br />Splint:
+          Heals broken bones (health).<br />Armor: Gives the player extra
+          protection against enemies.<br />Jump pack: Allows for vertical travel
+          at any height. Has limited fuel.
+        </p>
+        <h2 class="textbox--title">Level Design</h2>
+        <p>
+          The goal of the game is to find the dungeon door and key so you can
+          escape. Every level is procedurally generated so there will always be
+          a different layout. The procedural generation generates a flat ground
+          at the bottom where the player will spawn. From there, three pathways
+          are created: one that leads to the door, one that leads to the key,
+          and one that leads to a dead end. We added one with a dead end so that
+          the player is, initially, uncertain about what the pathways lead to.
+          This puts the player in an explorer mindset as they jump around the
+          level. Since the primary action is jumping, the levels are made up of
+          vertical passage ways, but we used some open spaces and horizontal
+          passage ways to break up repetition. Sometimes the generation creates
+          an area that is impossible to jump so to avoid the player getting
+          stuck, ghosts where added as a simple fix. They spawn in open spaces
+          as an extra jumping platform.
+        </p>
+        <h2 class="textbox--title">Enemy Design</h2>
+        <p>
+          There were still times when the player would get stuck, so the flying
+          goblins were introduced as a enemy that could be in any position and
+          be jumped off of. The flying goblin can travel through walls and
+          floors so it is usually always present. If the player is careful to
+          not get hit by the goblin, they can use the goblin as a jumping
+          platform. The orc was added as an enemy that would spawn above you and
+          fall down. Since the player spends most of the time jumping upwards,
+          the player needs to be on guard for orcs.
+        </p>
+      </div>
+    </div>
+    
+    <div class="image-enlarged-container--background">
+      <div class="image-enlarged-container">
+      </div>
+    </div>
+  </body>
+
+  <footer></footer>
+</html>
