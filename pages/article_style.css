@@ -9,7 +9,7 @@
 .article-description {
     margin-top: 100px;
     min-height: 400px;
-    background-color: white;
+    background-color: #F4F4F4;
 }
 
 .article-description--image {
@@ -73,7 +73,7 @@
 
 .textbox {
     padding: 20px;
-    background-color: white;
+    background-color: #F4F4F4;
 }
 
 .textbox--title {
