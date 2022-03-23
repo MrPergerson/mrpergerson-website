@@ -46,6 +46,10 @@
     color: inherit;
 }
 
+.links--dir h3 {
+    display: inline;
+}
+
 .links--dir a {
     margin-left: 2em;
 }

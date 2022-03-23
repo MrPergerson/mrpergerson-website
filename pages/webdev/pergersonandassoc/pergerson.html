@@ -4,82 +4,92 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../../global_style.css" />
-    <link rel="stylesheet" href="../../article_style.css" />
-    <!--<script type="text/javascript" src="../../../node_modules/jquery/dist/jquery.js"></script>-->
-    <script type="text/javascript" src="../../../js/jquery.min.js"></script>
-    <script type="text/javascript" src="../../../js/article-page.js"></script>
-    <title>Pergerson & Associates</title>
+    <link rel="stylesheet" href="../../article.css" />
+    <title>Mr. Pergerson</title>
   </head>
-
   <style>
-      #hero-image {
-        background-image: url('pergerson (1).png');
-      }
-      #background-image {
-        background-color: rgb(196, 196, 196);
-      }
-      #image1 {
-        background-image: url('pergerson (1).png');
-      }
-      #image2 {
-        background-image: url('pergerson (2).png');
-      }
-      #image3 {
-        background-image: url('pergerson (3).png');
-      }
-      #image4 {
-        background-image: url('pergerson (4).png');
-      }
-
+    #hero-image {
+      background-image: url('pergerson-1.png');
+    }
   </style>
-
-  <header>
-    <div class="block-container nopadding">
-      <a href="../../../index.html">MR. PERGERSON</a>
-      <div class="header-right">
-        <a href="../../webdev.html">WEB DEVELOPMENT</a>
-      </div>
-    </div>
-  </header>
-
-  <body id="background-image">
-    <div class="article-header">PERGERSON & ASSOCIATES</div>
-    <div class="block-container">
-      <div class="article-description">
-        <div class="article-description--image" id="hero-image"></div>
-        <div class="article-description--text">
-          <p class="article-description--text--info">
-            Released: TBA <br />
-            Medium: Website <br />
-            Tools: HTML/CSS/Javascript/PHP <br />
-            Type: Freelance <br />
-          </p>
-          <p class="article-description--text--text">
-            Remade previous website and added additional functionality
-          </p>
+  <body>
+    <div class="website-directory">
+      <div class="fixed-container">
+        <a href="../../../index.html">MR. PERGERSON</a>
+        <div class="website-directory__links">
+          <a href="../../gamedesign.html">GAME DESIGN</a>
+          <a href="../../webdev.html">WEB DEVELOPMENT</a>
         </div>
       </div>
-      <div class="gallery-2col">
-        <div id="image1" class="gallery-2col--item"></div>
-        <div id="image2" class="gallery-2col--item"></div>
-        <div id="image3" class="gallery-2col--item"></div>
-        <div id="image4" class="gallery-2col--item"></div>
-      </div>
-      <div class="textbox">
-        <h2 class="textbox--title"></h2>
-        <p>
-
-        </p>
-        
-      </div>
     </div>
+    <div class="fixed-container page-wrapper">
+      <section class="intro">
+        <header>
+          <h1 id="hero-image">Pergerson & Associates</h1>
+          <h2>Redesigning a Site to Meet Modern Needs</h2>
+        </header>
+        <article class="summary" id="summary">
+          <p>
+            Remade previous website and added additional functionality
+          </p>
+        </article>
+      </section>
 
-    <div class="image-enlarged-container--background">
-      <div class="image-enlarged-container">
-      </div>
+      <aside class="sidebar">
+        <div class="wrapper">
+          <article class="article-info">
+            <h3>Details</h3>
+            <ul>
+              <li><p>Released: TBA </p></li>
+              <li><p>Medium: Website</p></li>
+              <li><p>Tools: HTML/CSS/Javascript/PHP</p></li>
+              <li><p>Type: Freelance</p></li>
+            </ul>
+          </article>
+          <div class="article-nav">
+            <h3>Directory</h3>
+            <nav>
+              <ol>
+                <li><a href="#summary">Summary</a></li>
+                <li><a href="#section-1">Redesigning a Site to Meet Modern Needs</a></li>
+                <li><a href="#section-2">Recreating The Site</a></li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </aside>
+
+      <main>
+        <article class="content">
+          <section class="quick-notes" id="section-1">
+            <h2>Freelance Work For Small Business</h2>
+            <ul>
+              <li>
+                <p></p>
+              </li>
+              <li>
+                <p></p>
+              </li>
+              <li>
+                <p></p>
+              </li>
+              <li>
+                <p></p>
+              </li>
+            </ul>
+          </section>
+          <section class="section-2" id="section-2">
+            <h2>Recreating The Site</h2>
+            <p>
+              
+            </p>
+            <img src="pergerson-2.png" alt="services section of the site" height="200px" />
+          </section>
+        </article>
+        <footer>
+          <a href="http://"></a>
+        </footer>
+      </main>
     </div>
   </body>
-
-  <footer></footer>
 </html>

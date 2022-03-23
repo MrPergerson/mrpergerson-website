@@ -4,84 +4,170 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../../global_style.css" />
-    <link rel="stylesheet" href="../../article_style.css" />
-    <!--<script type="text/javascript" src="../../../node_modules/jquery/dist/jquery.js"></script>-->
-    <script type="text/javascript" src="../../../js/jquery.min.js"></script>
-    <script type="text/javascript" src="../../../js/article-page.js"></script>
+    <link rel="stylesheet" href="../../article.css" />
     <title>Death Stranding</title>
   </head>
-
   <style>
-      #hero-image {
-        background-image: url('ds_1.png');
-      }
-      #background-image {
-        background-color: rgb(20, 20, 20);
-      }
-      #image1 {
-        background-image: url('ds_5.png');
-      }
-      #image2 {
-        background-image: url('ds_2.png');
-      }
-      #image3 {
-        background-image: url('ds_3.png');
-      }
-      #image4 {
-        background-image: url('ds_4.png');
-      }
-
+    #hero-image {
+      background-image: url('ds_1.png');
+    }
   </style>
-
-  <header>
-    <div class="block-container nopadding">
-      <a href="../../../index.html">Mr. Pergerson</a>
-      <div class="header-right">
-        <a href="../../webdev.html">Web Development</a>
-      </div>
-    </div>
-  </header>
-
-  <body id="background-image">
-    <div class="article-header">THOUGHTS ON DEATH STRANDING</div>
-    <div class="block-container">
-      <div class="article-description">
-        <div class="article-description--image" id="hero-image"></div>
-        <div class="article-description--text">
-          <p class="article-description--text--info">
-            Released: 03/17/22 <br />
-            Medium: Web App <br />
-            Tools: HTML & CSS, GSAP <br />
-            Type: Solo project <br />
-          </p>
-          <p class="article-description--text--text">
-            My thoughts on the video game Death Stranding. All images are taken by me using the in-game photo mode. 
-          </p>
+  <body>
+    <div class="website-directory">
+      <div class="fixed-container">
+        <a href="../../../index.html">MR. PERGERSON</a>
+        <div class="website-directory__links">
+          <a href="../../gamedesign.html">GAME DESIGN</a>
+          <a href="../../webdev.html">WEB DEVELOPMENT</a>
         </div>
       </div>
-      <div class="gallery-2col">
-        <div id="image1" class="gallery-2col--item"></div>
-        <div id="image2" class="gallery-2col--item"></div>
-        <div id="image3" class="gallery-2col--item"></div>
-        <div id="image4" class="gallery-2col--item"></div>
-      </div>
-      <div class="textbox">
-        <h2 class="textbox--title"></h2>
-        <p>
-
-        </p>
-        
-      </div>
     </div>
+    <div class="fixed-container page-wrapper">
+      <section class="intro">
+        <header>
+          <h1 id="hero-image">Death Stranding</h1>
+          <h2>A simple website I made to learn GSAP</h2>
+        </header>
+        <article class="summary" id="summary">
+          <p>
+            My thoughts on the video game Death Stranding. All images are taken by me using the in-game photo mode. 
+          </p>
+        </article>
+      </section>
+      <aside class="sidebar">
+        <div class="wrapper">
+          <article class="article-info">
+            <h3>Details</h3>
+            <ul>
+              <li><p>Released: 03/17/22</p></li>
+              <li><p>Medium: Website</p></li>
+              <li><p>Tools: HTML, CSS, & GSAP</p></li>
+              <li><p>Type: Solo project</p></li>
+            </ul>
+          </article>
+          <div class="article-nav">
+            <h3>Directory</h3>
+            <nav>
+              <ol>
+                <li><a href="#summary">Summary</a></li>
+                <li><a href="#section-2">Planning</a></li>
+                <li><a href="#section-3">Scrolling Intro</a></li>
+                <li><a href="#section-4">Image fade-in effects</a></li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </aside>
+      <main>
+        <article class="content">
+          <section class="quick-notes" id="section-1">
+            <h2>Learning G.S.A.P.</h2>
+            <ul>
+              <li>
+                <p>GSAP is a free JS library for animating HTML elements.</p>
+              </li>
+              <li>
+                <p>Before coding, I first planned the layout, colors, and animations of the site.</p>
+              </li>
+              <li>
+                <p>I used GSAP's written and video documentation to understand how to use the library for my desired vision.</p>
+              </li>
+              <li>
+                <p>I finished the website with a scrolling hero animation and multiple image fade-in effects.</p>
+              </li>
+            </ul>
+          </section>
+          <section class="section-2" id="section-2">
+            <h2>Planning</h2>
+            <p>
+              I started in Figma by brainstorming the layout, featured images, and colors.        
+            </p>
+            <img src="ds-doc-01.png" alt="placeholder" width="100%" />
+            <img src="ds-doc-02.png" alt="placeholder" width="100%" />
+            <img src="ds-doc-03.png" alt="placeholder" width="100%" />
+            <h3>Figma layout</h3>
+            <p>
+              Once I had a direction, I experimented with different layouts and styles before I committed to the final one.       
+            </p>
+            <img src="ds-doc-04.png" alt="placeholder" width="100%" />
+          </section>
+          <section class="section-3" id="section-3">
+            <h2>Scrolling Introduction</h2>
+            <img src="ds_5.png" alt="placeholder" height="200px" />
+            <p>
+              When the viewer begins to scroll down, a background image will fade-in before scrolling down to the article. 
+              The solution for this wasn't so obvious so I had to browse around CodePen for an example of how this might be down. What I ended up doing 
+              was creating a scrollElement div that had a hight of 2000px and set the background position to sticky. When the viewer scrolled down, the background would 
+              appear to be static until the end of the scrollElement was reached.
+              <br><br>
+              Here is my CSS and Javascript code for this effect.
+            </p>
+              <pre>
+                <code>
+      .intro {
+          position: sticky;
+          top: 0;
+          height: 100vh;
+          text-align: center;
+          background-image: url("img/Screenshot_24.png");
+      }
 
-  <div class="image-enlarged-container--background">
-    <div class="image-enlarged-container">
+      .scrollElement {
+        height: 2000px;
+        z-index: 0;
+      }
+                  </code>
+              </pre> 
+              <pre>
+                <code>
+      gsap.from('.intro-text', {opacity: 0, duration: 2, ease: "power1.out"});
+      gsap.from(".title", {letterSpacing: ".9em", duration: 2.5, ease: "power1.out"});
+    
+      gsap.to(".bg-overlay", {
+          scrollTrigger: {
+              trigger: ".scrollElement",
+              start: "20px top",
+              end: "bottom bottom",
+              scrub: 1,
+          },
+          opacity: 0, duration: 5, ease: "power1.out"
+      });
+                </code>
+              </pre> 
+
+          </section>
+          <section class="section-4" id="section-4">
+            <h2>Image fade-in effects</h2>
+            <img src="ds_3.png" alt="placeholder" height="200px" />
+            <p>
+              For the images, I wanted them to fade-in as the viewer scrolled down. I needed a solution that would target all img tags without animating them
+              all at once. I found through looking at the GSAP documentation that I could get all the images in an array and assign each one a unique
+              scroll trigger. 
+              <br><br>
+              Here is the Javascript code for that.
+            </p>
+            <pre>
+              <code>
+        const images = gsap.utils.toArray('img');
+        images.forEach(image => {
+            gsap.to(image, {
+                scrollTrigger: {
+                    trigger: image,
+                    start: "0 70%"
+                },
+                opacity: 1, duration: 2, ease: "power3.out"
+            });
+        })
+            
+                </code>
+            </pre> 
+
+          </section>
+        </article>
+        <footer>
+          <a href="http://"></a>
+        </footer>
+      </main>
     </div>
-  </div>
-  
-
   </body>
-
-  <footer></footer>
 </html>
