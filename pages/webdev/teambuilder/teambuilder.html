@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../article.css" />
-    <title>Article</title>
+    <title>Mr. Pergerson</title>
   </head>
   <style>
     #hero-image {
-      background-image: url('tb-cover.png');
+      background-image: url("tb-final-4.png");
     }
   </style>
   <body>
@@ -29,9 +29,7 @@
           <h2>A Concept for an Team Building Web App</h2>
         </header>
         <article class="summary" id="summary">
-          <p>
-            TeamBuilder is a free online tool that can help for teams.
-          </p>
+          <p>TeamBuilder is a working prototype for a free online tool that can help form teams.</p>
         </article>
       </section>
       <aside class="sidebar">
@@ -39,10 +37,10 @@
           <article class="article-info">
             <h3>Details</h3>
             <ul>
-              <li><p>Released: TBA</p></li>
-              <li><p>Medium: Web App </p></li>
+              <li><p>Released: 03/28/22</p></li>
+              <li><p>Medium: Web App</p></li>
               <li><p>Tools: React, Node.js, MongoDB, Tailwind</p></li>
-              <li><p>Type: Solo project/p></li>
+              <li><p>Type: Solo project/p></p></li>
             </ul>
           </article>
           <div class="article-nav">
@@ -50,8 +48,10 @@
             <nav>
               <ol>
                 <li><a href="#summary">Summary</a></li>
-                <li><a href="#section-1">Planning</a></li>
-                <li><a href="#section-2">Building A Concept with React and Tailwind</a></li>
+                <li><a href="#section-1">Building A Concept with React and Tailwind</a></li>
+                <li><a href="#section-2">Final Layout</a></li>
+                <li><a href="#section-3">Planning</a></li>
+                <li><a href="#section-4">Learning React</a></li>
               </ol>
             </nav>
           </div>
@@ -63,32 +63,526 @@
             <h2>Building A Concept with React and Tailwind</h2>
             <ul>
               <li>
-                <p></p>
+                <p>Built a front-end concept for a site that allows users to organize a list of people into teams.</p>
               </li>
               <li>
-                <p></p>
+                <p>Used Tailwind to create stylize the site based off a Figma design concept.</p>
               </li>
               <li>
-                <p></p>
+                <p>Integrated React Table hook into front-end infrastructure.</p>
               </li>
               <li>
-                <p></p>
+                <p>Learned how to effectively use React hooks read data from a JSON file.</p>
+              </li>
+              <li>
+                <p>Improved robustness of the code by refactoring functionality to separate components.</p>
+              </li>
+              <li>
+                <p>Learned how to program a Node.js server to host the react front-end site.</p>
               </li>
             </ul>
           </section>
           <section class="section-2" id="section-2">
-            <h2>Planning</h2>
-            <p>
-              
-            </p>
-            <img src="tb-1.png" alt="login for TeamBuilder" height="200px" />
+            <h2>Final Layout</h2>
+            <p>Here is the final layout for TeamBuilder.</p>
+            <img src="tb-final-4.png" alt="login for TeamBuilder" width="130%" />
+            <img src="tb-final-3.png" alt="add member page" width="130%" />
+            <img src="tb-final-2.png" alt="view teams page" width="130%" />
+            <img src="tb-final-1.png" alt="edit team amount menu" width="130%" />
           </section>
           <section class="section-3" id="section-3">
-            <h2>Learning React</h2>
+            <h2>Planning</h2>
             <p>
-              
+              Before I started working, I drew concepts for the layout and colors using Figma. My goal was to create a simple interface that made working with long lists of people and attributes to be
+              pleasant. 
+              <br><br>
+              The biggest stylistic choice I made was to frame the app in a smaller frame. Since I had a small set of features and no need for large amounts of white space, I condensed the
+              app into a smaller space. With a smaller frame, the app appeared to more minimal and easy to use, which supported my goals. 
+              <br><br>
+              For navigation and functionality, I limited myself to use only headers and buttons. I wanted the user to clearly see the functionality, rather than read about in a description. Drop shadows 
+              were used to aid navigation by subtly emphasizing the buttons so that they didn't blend in with the other elements. 
             </p>
-            <img src="tb-1.png" alt="login for TeamBuilder" height="200px" />
+            <img src="tb-planning-1.png" alt="add members concept" width="130%" />
+            <img src="tb-planning-3.png" alt="teams page concept" width="130%" />
+            <img src="tb-planning-4.png" alt="overview of figma file" width="130%" />
+            <p>While this didn't make it into the prototype, I did think about how the app would support different groups of teams.</p>
+            <img src="tb-planning-2.png" alt="view teams page concept" width="130%" />
+          </section>
+          <section class="section-4" id="section-4">
+            <h2>Learning React</h2>
+            <img src="tb-react-1.png" alt="a segment of the code" width="100%" />
+            <p>
+              I had dabbled in React before, but this was my first finished product using React. To focus on learning React, I used a third party hook, called React Table, that would render a table
+              for me.
+            </p>
+            <img src="tb-react-2.png" alt="the homepage for react table plugin" width="100%" />
+            <h3>useState and useEffect</h3>
+            <p>
+              I needed a way to import a json file, that contained a list of people with attributes, into the site and have React Table render the data. I quickly learned that I could not simply
+              import the data, cache it to a variable, and have React Table render. React only renders the page when any element was updated, such as when a div becomes hidden or text is updated. If I
+              tried to import the data into a file and send it to React Table, React would send too many re-renders errors and not render the site. I had to use a specific way to update my
+              table.
+              <br /><br />
+              There are two hooks that solved my issue, which were useState and useEffect (see code below). UseState can store and set a variable across many different pages, although it not a global variable. In my
+              example, I stored the imported json file in the data useState variable. I do this by calling setData, and passing in the data variable from fetchData function. UseEffect 
+              is a filtered function caller. It will call the code it contains when a specific variable is changed. Any change to fetchData will call useEffect.
+              At start of the program, fetchData is assigned to useCallback(), which in turn, calls useEffect, which then calls fetchData() and imports the list.
+            </p>
+            <pre>
+              <code>
+                let [data, setData] = useState([]);
+
+                const fetchData = useCallback(() => {
+                  fetch('./members-test.json')
+                  .then(response => response.json())
+                  .then(data => setData(data))
+                }, [],
+                )
+              
+                useEffect(() => {
+                  fetchData();
+                }, [fetchData]);
+              </code>
+            </pre>
+            <h3>Splitting Code into Components</h3>
+            <p>
+              Here is the code that renders the AddMembers page. This is where the user would import a list of members or add members individually. This prototype only supported one json file since I was  
+              focusing on developing the front-end site.
+            </p>
+            <pre>
+              <code>
+                import { Link } from "react-router-dom";
+                import React, {useCallback, useState, useEffect, useMemo} from "react";
+                import MemberList from '../components/memberList.js';
+                import { ArrowNarrowLeftIcon } from '@heroicons/react/outline';
+                import {QuestionMarkCircleIcon} from '@heroicons/react/outline';
+                
+                function PushNewColumn(columns)
+                {
+                    let newIndex = columns.length;
+                    columns.push(      
+                    {
+                        Header: `Column${newIndex}`,
+                        accessor: `col${newIndex}`
+                    });
+                
+                    return columns;           
+                }
+                
+                function AddMembers({memberOptions, teamOptions}) {
+                
+                  let testColumns = useMemo(
+                    () =&gt; [
+                      {
+                        Header: "Name",
+                        accessor: "name", // accessor is the "key" in the data
+                      },
+                      {
+                        Header: "Degree",
+                        accessor: "degree",
+                      },
+                      {
+                        Header: "Primary Skill",
+                        accessor: "primarySkill",
+                      },
+                      {
+                        Header: "Level",
+                        accessor: "primarySkillLevel",
+                      },
+                      {
+                        Header: "Secondary Skill",
+                        accessor: "secondarySkill",
+                      },
+                      {
+                        Header: "Level",
+                        accessor: "secondarySkillLevel",
+                      },
+                    ],[]
+                  );
+
+                  return (
+                    &lt;&gt;
+                      &lt;div className="container mx-auto bg-white border border-grey-300 rounded-lg mt-12"&gt;
+                        &lt;div className="flex bg-gray-300 rounded-t-lg px-10 py-1 font-semibold justify-between"&gt;          
+                            &lt;Link to="/" className=" flex items-center"&gt;
+                              &lt;ArrowNarrowLeftIcon className="h-5 mr-1"/&gt;
+                              &lt;span&gt;
+                                Return
+                              &lt;/span&gt;
+                            &lt;/Link&gt;           
+                            &lt;Link to="/" className="flex items-center"&gt;
+                              &lt;QuestionMarkCircleIcon className="h-5 mr-1"/&gt;
+                              &lt;span&gt;
+                                Help
+                              &lt;/span&gt;
+                            &lt;/Link&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                          &lt;div className="mx-10"&gt;
+                            &lt;h1 className="text-5xl mb-1 mt-5 font-bold tracking-tight"&gt;Create New Teams&lt;/h1&gt;
+                            &lt;p className=" mb-7 font-bold text-sm text-gray-500"&gt;Team Builder&lt;/p&gt;
+                            &lt;div className="flex my-5 font-bold"&gt;
+                              &lt;div className="flex w-12 h-12 mr-2 rounded-50 bg-gray-400 items-center justify-center"&gt;1&lt;/div&gt;
+                              &lt;div className="flex w-12 h-12 mr-2 rounded-50 bg-gray-300 items-center justify-center"&gt;2&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;h3 className="text-3xl font-bold mb-1 tracking-tight"&gt;Add Members&lt;/h3&gt;
+                            &lt;div className="mb-4"&gt;
+                              &lt;button className="ml-0 mr-1 border border-black py-2 px-6 font-bold drop-shadow bg-white"&gt;Add a Member&lt;/button&gt;
+                              &lt;button className="ml-0 mr-1 border border-black py-2 px-6 font-bold drop-shadow bg-white"&gt;Import .csv&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;h3 className="text-3xl font-bold mb-1 tracking-tight"&gt;Member List&lt;/h3&gt;
+                            &lt;div className="mb-4"&gt;
+                              &lt;button className="ml-0 mr-1 border border-black py-1 px-2 text-sm drop-shadow bg-white"&gt;Select&lt;/button&gt;
+                              &lt;button className="ml-0 mr-1 border border-black py-1 px-2 text-sm drop-shadow bg-white"&gt;Select All&lt;/button&gt;
+                              &lt;button className="ml-0 mr-1 border border-black py-1 px-2 text-sm drop-shadow bg-white"&gt;Delete&lt;/button&gt;
+                              &lt;button className="ml-0 mr-1 border border-black py-1 px-2 text-sm drop-shadow bg-white"&gt;Save File&lt;/button&gt;
+                              &lt;button className="ml-0 mr-1 border border-black py-1 px-2 text-sm drop-shadow bg-white"&gt;Print/Export List&lt;/button&gt;
+                            &lt;/div&gt;
+                            &lt;div className=""&gt;
+                              &lt;MemberList columns={memberOptions.columns}/&gt;
+                            &lt;/div&gt;
+                            &lt;div&gt;
+                              &lt;Link to="/formteams" className="inline-block font-bold ml-0 mr-1 my-3 border border-black py-2 px-6  drop-shadow bg-white"&gt;
+                                Form Teams
+                              &lt;/Link&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/&gt;
+                  );
+                }
+                
+                export default AddMembers;            
+              </code>
+            </pre>
+            <p>To make the code more robust and easier to debug, I moved any code related to the member list into its own component. Here you can see how I used useState and 
+              useEffect in conjunction with React Table. This component returns HTML that renders the table with the imported data. I was able to later use this component in other pages, 
+              in the event that the user wants to edit the members again.
+            </p>
+            <pre>
+              <code>
+                import {useState, useCallback, useEffect} from 'react';
+                import { useTable } from "react-table";
+
+                function MemberList({columns})
+                {
+                  let [data, setData] = useState([]);
+
+                  const fetchData = useCallback(() =&gt; {
+                    fetch('./members-test.json')
+                    .then(response =&gt; response.json())
+                    .then(data =&gt; setData(data))
+                  }, [],
+                  )
+
+                  useEffect(() =&gt; {
+                    fetchData();
+                  }, [fetchData]);
+
+                  const {
+                    getTableProps,
+                    getTableBodyProps,
+                    headerGroups,
+                    rows,
+                    prepareRow,
+                  } = useTable({ columns, data });
+
+                  return(
+                    &lt;div className="bg-gray-100 w-full border border-black p-2"&gt;
+                      &lt;table className="table-fixed" {...getTableProps()}&gt;
+                          &lt;thead&gt;
+                            {
+                              headerGroups.map((headerGroup) =&gt; (
+                                &lt;tr className="text-left"{...headerGroup.getHeaderGroupProps()}&gt;
+                                  {
+                                    headerGroup.headers.map((column) =&gt; (
+                                      &lt;th {...column.getHeaderProps()}&gt;
+                                        {
+                                          // Render the header
+                                          column.render("Header")
+                                        }
+                                      &lt;/th&gt;
+                                    ))
+                                  }
+                                &lt;/tr&gt;
+                              ))
+                            }
+                          &lt;/thead&gt;
+                          &lt;tbody {...getTableBodyProps()}&gt;
+                            {
+                              rows.map((row) =&gt; {
+                                prepareRow(row);
+                                return (
+                                  &lt;tr {...row.getRowProps()}&gt;
+                                    {
+                                      row.cells.map((cell) =&gt; {
+                                        return (
+                                          &lt;td  className="w-40 py-2" {...cell.getCellProps()}&gt;
+                                            {
+                                              cell.render("Cell")
+                                            }
+                                          &lt;/td&gt;
+                                        );
+                                      })
+                                    }
+                                  &lt;/tr&gt;
+                                );
+                              })
+                            }
+                          &lt;/tbody&gt;
+                      &lt;/table&gt;
+                    &lt;/div&gt;
+                  )
+                }
+
+                export default MemberList;
+              </code>
+            </pre>
+            <h3>An attempt to do back-end programming</h3>
+            <p>For while, I was confused about the true proposes of npm, node.js, php, MongoDB. Web development was already complicated, and learning how to run a server that could contain and process
+              data seemed even more daunting. Although, I knew that if I wanted to fully realize TeamBuilder, I would need to dive into the back-end programming world. Through a full-stack React tutorial
+              that I listened to on LinkedIn Learning, I learned how to write a simple node server that ran my TeamBuilder project.
+            </p>
+            <pre>
+              <code>
+                import express from 'express';
+                import {MongoClient} from 'mongodb';
+
+                const app = express();
+
+                // allows the server to extract json data
+                app.use(express.json());
+                app.use(express.urlencoded({extended: true}));
+
+                const withDB = async (operations, res) => {
+                    try {
+                        let client = await MongoClient.connect('mongodb://localhost:27017');
+                        let db = client.db('teambuilder');
+
+                        await operations(db);
+
+                        await client.close();
+
+                    } catch (error)
+                    {
+                        res.status(500).json({message: "Failed to connect to database", error});
+                    }
+                }
+
+                app.get('/api/groups/:name' , async (req,res) => {
+                    withDB( async (db) => {
+                        const groupName = req.params.name;
+
+                        const groupInfo = await db.collection('groups').findOne({name: groupName});
+                        res.status(200).json(groupInfo);
+                    }, res);
+                });
+
+                app.listen(8000, () => console.log('Server is running on port 8000'));
+              </code>
+            </pre>
+            <h3>Node Server Explanation</h3>
+            <p>For anyone curious about how one creates a node.js server with MongoDB, here are my notes from another project.</p>
+            <pre>
+              <code>
+                import express from 'express';
+                import {MongoClient} from 'mongodb';
+                import path from 'path'; // no need for npm install path, path is included with node.js
+
+
+                /*
+                When I was finished with the react site, I built it using > npm run build
+                Then I copy and pasted the build folder into the src file
+                I wrote 'import path from 'path';' at the top
+                Then wrote 'app.use(express.static(path.join(__dirname, '/build')));' at the bottom
+                Added this near the end of the file. Before the port listen
+                app.get('*', (req, res) => {
+                    res.sendFile(path.join(__dirname + '/build/index.html'));
+                })
+
+                */
+
+                const app = express();
+
+                // tells the server where to store static files
+                app.use(express.static(path.join(__dirname, '/build')));
+
+
+                //middleware
+                // allows the server to extract json data
+                app.use(express.json());
+                app.use(express.urlencoded({extended: true}));
+
+                /*
+                //simple get
+                app.get('/hello', (req, res) => {
+                    res.send("Hello World");
+                } )
+                // get parameter from url
+                app.get('/hello/:name', (req, res) => {
+                    res.send(`Hello ${req.params.name}!`);
+                } )
+
+                // get json info from request
+                app.post('/hello', (req ,res) => {res.send(`Hello ${req.body.name}, how are you?`)});
+                */
+
+                const widthDB = async (operations, res) => {
+                    try {
+                        let client = await MongoClient.connect('mongodb://localhost:27017');
+                        let db = client.db('my-blog');
+
+                        await operations(db);
+
+                        await client.close();
+                    } catch (error) {
+                        res.status(500).json({message: "Failed to connect to database", error});
+                    }
+                }
+
+
+                app.get('/api/articles/:name', async (req, res) => {
+                    widthDB(async (db) => {
+                        const articleName = req.params.name;
+
+                        const articleInfo = await db.collection('articles').findOne({name: articleName});
+                        res.status(200).json(articleInfo);
+                    }, res);
+                })
+
+                // add vote
+                app.post('/api/articles/:name/upvote', async (req, res) => {
+                    widthDB(async(db) => {
+                        const articleName = req.params.name;
+                        const articleInfo = await db.collection('articles').findOne({name: articleName});
+
+                        await db.collection('articles').updateOne({name: articleName}, {
+                            "$set": {
+                                upvotes: articleInfo.upvotes + 1
+                            }
+                        });
+                        
+                        const updatedArticle = await db.collection('articles').findOne({name: articleName});
+                        res.status(200).json(updatedArticle);
+                    }, res);
+                })
+
+                // add comment
+                app.post('/api/articles/:name/add-comment', (req, res) => {
+                    const articleName = req.params.name;
+                    const {username, comment} = req.body;
+
+                    widthDB(async(db) => {
+                        const articleInfo = await db.collection('articles').findOne({name:articleName});
+
+                        await db.collection('articles').updateOne({name: articleName}, {
+                            "$set" : {
+                                comments: articleInfo.comments.concat({username, comment})
+                            }
+                        });
+                        const updatedArticle = await db.collection('articles').findOne({'name':articleName});
+                        res.status(200).send(updatedArticle);
+
+                    },res);
+                })
+
+                // tells app that any requests not caught by any of the api routes should be passed on to our app
+                // will allow client side to navigate between pages and urls correctly
+                // Still don't understand this
+                app.get('*', (req, res) => {
+                    res.sendFile(path.join(__dirname + '/build/index.html'));
+                })
+
+                app.listen(8000, () => {
+                    console.log("App is running")
+                })
+
+                // create backend folder with src as route
+
+                // install node
+                // npm install express --save
+                // https://expressjs.com/en/starter/installing.html
+
+                // install babel for node
+                // npm install --save-dev @babel/core @babel/node @babel/preset-env
+                // https://babeljs.io/docs/en/babel-node
+
+                // create .babelrc file
+                /* add this to it
+                {
+                    "presets": ["@babel/preset-env"]
+                }
+                */
+
+                /* Basic server.js setup
+
+                import express from 'express';
+
+                const app = express();
+
+                app.get('/hello' , (req,res) => {
+                    res.send("Hello");
+                });
+
+                app.listen(8000, () => console.log('Server is running on port 8000'));
+
+                */
+
+                // start server: npx babel-node src/server.js
+
+
+                // install nodemon
+                // this package automatically detects changes and updates the server
+                // npm install --save-dev nodemon
+                // run nodemon
+                // npx nodemon --exec npx babel-node src/server.js
+                // added script to package.json
+                // "scripts": {
+                //     "start" : "npx nodemon --exec npx babel-node src/server.js"
+                // },
+                // usage: npm start
+
+                // mongo
+                // installed mongoDB
+                // Added C:\Program Files\MongoDB\Server\5.0\bin to environment variables
+                // 'Edit the system environment variables' => 'Environment Variables' => 'System Variables' => 'Edit 'Path'' => Add new (Insert url here)
+                // opened cmd and typed mongo
+                // installed mongosh from this url https://docs.mongodb.com/mongodb-shell/install/
+                // exit cmd and reopen it.
+                // > mongosh
+                // > use my-blog
+                /*
+                > db.articles.insertMany([{
+                ... name: "learn-react",
+                ... upvotes: 0,
+                ... comments: [],
+                ... }, {
+                ... name: "learn-node",
+                ... upvotes: 0,
+                ... comments: [],
+                ... }, {
+                ... name: "my-thoughts-on-resumes",
+                ... upvotes: 0,
+                ... comments: [],
+                ... }
+                ... ])
+                */
+                // find all
+                // > db.articles.find({})
+                // find one
+                // > db.articles.findOne({name: 'learn-react'})
+                // exit the cmd
+                // > exit
+
+                // setup server to use mongoDB
+                // in the VS terminal
+                // > npm install mongodb
+                // then import the client
+                // import {MongoClient} from 'mongodb';
+
+              </code>
+            </pre>
           </section>
         </article>
         <footer>
