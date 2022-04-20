@@ -61,6 +61,7 @@
 
 .about {
     display: flex;
+    padding: 1em 1em;
 }
 
 .about--name {
@@ -117,7 +118,7 @@
     }
 
     .name {
-        font-size: 4em;
+        font-size: 3em;
     }
 
     .links--dir

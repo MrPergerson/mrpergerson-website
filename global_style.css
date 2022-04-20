@@ -9,7 +9,7 @@ body
     margin: 0px;
 }
 
-header {
+.directory {
     
     background-color: white;
     position: fixed;
@@ -18,7 +18,7 @@ header {
     font-family: 'Nunito Sans', sans-serif;
 }
 
-header a {
+.directory a {
     text-align: center;
     padding: 14px 0px;
     text-decoration: none;
@@ -27,7 +27,7 @@ header a {
     text-transform: uppercase;
 }
 
-header a:hover {
+.directory a:hover {
     color: rgb(110, 110, 110);
  }
 
@@ -40,8 +40,8 @@ header a:hover {
 }
 
 .block-container {
-    margin: auto;
-   padding: 1em 1em;
+   margin: auto;
+   padding: 0em 1em;
 }
 
 .nopadding {
