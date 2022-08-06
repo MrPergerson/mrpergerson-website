@@ -45,6 +45,30 @@ img {
     margin: auto;
 }
 
+.game-container {
+    
+
+    width: 1000px;
+    margin: auto;
+
+    padding-top: 100px;
+    
+
+}
+
+.game-container iframe {
+
+    margin: auto;
+    display: block;
+    padding: 1em;
+
+
+    border-style: solid;
+    border-color: #afafaf;
+    background-color: transparent;
+    border-width: 1px;
+}
+
 .website-directory {
     
     background-color: white;
