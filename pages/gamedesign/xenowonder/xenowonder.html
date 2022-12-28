@@ -9,7 +9,7 @@
   </head>
   <style>
     #hero-image {
-      background-image: url('../../image_placeholder.png');
+      background-image: url('xeno-wonder_003_0000.jpg');
     }
   </style>
   <body>
@@ -41,10 +41,9 @@
           <article class="article-info">
             <h3>Details</h3>
             <ul>
-              <li><p></p></li>
-              <li><p></p></li>
-              <li><p></p></li>
-              <li><p></p></li>
+              <li><p>Title: Xeno-Wonder</p></li>
+              <li><p>Released: Dec 1st, 2022</p></li>
+              <li><p>Platforms: Web and PC</p></li>
             </ul>
           </article>
           <div class="article-nav">
@@ -73,29 +72,26 @@
       <main>
         <article class="content">
           <section class="quick-notes" id="section-1">
-            <h2>Quick Notes</h2>
+            <h2>Quick Summary</h2>
             <ul>
               <li>
-                <p></p>
+                <p>Team of 3 developers created a strategy game in 3 weeks as part of GitHub's <i>Game Off 2022</i> game jam</p>
               </li>
               <li>
-                <p></p>
+                <p>Finished our MVP in a week, then spent the rest of the time adding assets and improving game design</p>
               </li>
               <li>
-                <p></p>
-              </li>
-              <li>
-                <p></p>
+                <p>Playtesting made clear the aspects of the game that needed to be balanced</p>
               </li>
             </ul>
           </section>
           <section class="section-2" id="section-2">
             <h2>Who really built the pyramids?</h2>
             <p>
-                Xeno-Wonder is a resource management strategy game where you play as an ancient alien UFO building a pyramid wonder. The game was made over the course of 3 weeks during GitHub’s *Game Off 2022* game jam with a team of 3 game developers.
+                Xeno-Wonder is a resource management strategy game where you play as an ancient alien UFO building a pyramid wonder. The game was made over the course of 3 weeks during GitHub’s <i>Game Off 2022</i> game jam with a team of 3 game developers.
             </p>
             <p>
-                **Made by**<br>
+                <b>Made by</b><br>
                 Sound & Music: Miles Caraker<br>
                 Art: Alec Chou<br>
                 Game Design & Programming: Cole Pergerson
@@ -115,7 +111,7 @@
             <p>
                 We came up with two ideas, an ancient aliens inspired strategy game, or a physical based puzzle game where you play as common game ideas, like an explosive barrel. Through a vote, we settled on the first idea and began sketching. 
             </p>
-            <img src="../../image_placeholder.png" alt="placeholder" height="200px" />
+            <img src="xenowonder00.png" alt="placeholder" width="100%" />
             <p>Here is an early blender sketch to visual what we were imagining. Besides the camera angle, the sketch closely resembles what the final game ended up looking like.</p>
             <p>
                 We had the following requirements for the game<br>
@@ -126,6 +122,7 @@
                 - If the pyramid build progress is set to 0%, the player loses.<br>
                 - When barbarians combine with the pyramid, build progress depletes.<br>
             </p>
+            <img src="xenowonder_brainstorming_01.png" alt="placeholder" width="100%" />
             <p>
                 To generate ideas, we used a matrix to list all of the possible combinations. We had a fun imagining how this game could play out as a simple civilization-like game. To simply the scope, we chose the most important objects to the game experience to prioritize, those being: people, rock, brick, pyramid, and barbarian.
             </p>
@@ -133,7 +130,7 @@
           </section>
           <section class="section-4" id="section-4">
             <h2>Dialing in the MVP</h2>
-            <img src="../../image_placeholder.png" alt="placeholder" height="200px" />
+            <img src="xenowonder_brainstorming_02.png" alt="placeholder" width="100%" />
             <p>
                 Priority Verbs<br>
                 - Combine: Two object are placed together and an output is created after X time<br>
@@ -150,7 +147,7 @@
           </section>
           <section class="section-5" id="section-5">
             <h2>Early Programming Progress</h2>
-            <img src="../../image_placeholder.png" alt="placeholder" height="200px" />
+            <img src="xenowonder01.png" alt="placeholder" width="100%" />
             <p>
                 The first task on the todo list was the grid. The grid was a requirement for the player to drop and pick up objects from the ground, and barbarians needed to use a grid for their path-finding. 
             </p>
@@ -239,8 +236,11 @@ namespace AncientAliens.GridSystem
 }
 
             </code></pre>
-            <img src="../../image_placeholder.png" alt="placeholder" height="200px" />
-            <p>Shortly after, the pick up and drop mechanic were implemented. Next was combing</p>
+            <video width="100%" controls>
+              <source src="movie_001.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video> 
+            <p>Shortly after, the pick up and drop mechanic were implemented. Next was combining</p>
             <p>In TreactorBeam.cs</p>
             <pre><code>
 public bool PickUpTileObject()
@@ -302,8 +302,11 @@ public bool DropTileObject()
 
 }
             </code></pre>
-            <img src="../../image_placeholder.png" alt="placeholder" height="200px" />
-            <p>Basic iteration of combing was done</p>
+            <video width="100%" controls>
+              <source src="movie_002.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video> 
+            <p>Basic iteration of combining was done</p>
             <p>Combination logic was put into the GameManager class, a singleton class that could be accessed anywhere. In the Tile class, when two Tileobjects are assigned to its location, it will call GameManager.Instance.Combine(). The Contains() function of List was used to make the code more readable. </p>
             <div class="note">I  wish I came up with a better way to detect combinations as this was not scalable. </div>
             <p>In gamemanager class</p>
@@ -493,11 +496,20 @@ namespace AncientAliens.Combinations
 }
             </code></pre>
             <div class="note">One thing you may have noticed was that I was often creating and destroying gameObjects. The programming overlords would not be proud of me—I never used object pooling. In my mind, object pooling added another level of complexity and, since I was prototyping, I didn't bother thinking about it. As the deadline approached, the effort of implementing object pooling became larger. Looking back, it would probably a good idea to add it in the beginning of the project. </div>
-            <img src="../../image_placeholder.png" alt="placeholder" height="200px" />
+            <video width="100%" controls>
+              <source src="movie_003.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video> 
             <p>A very very rough pyramid </p>
-            <img src="../../image_placeholder.png" alt="placeholder" height="200px" />
+            <video width="100%" controls>
+              <source src="movie_004.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video> 
             <p>The first basic gameplay loop was almost finished. The player could win the game, by dropping brick into the pyramid until progress reached 100%. To finish core loop, the next task was to add the barbarians.</p>
-            <img src="../../image_placeholder.png" alt="placeholder" height="200px" />
+            <video width="100%" controls>
+              <source src="movie_007.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video> 
             <p>Sebastian Lagues A* video was used to implement pathfinding for barbarians. Since a node graph was already implemented, all that was needed was to understand the theory, and then use the algorithm that Sebastian wrote. Some minor adjustments were made to flavor code to our game. </p>
             <p>With the core loop finished and about 2 weeks left, we felt pretty confident with finishing. The was missing most of the art and sounds, and there had been no balancing.
             </p>
@@ -581,41 +593,42 @@ IEnumerator MoveToPathOverTime()
           </section>
           <section class="section-6" id="section-6">
             <h2>Adding Art</h2>
-            <img src="../../image_placeholder.png" alt="placeholder" height="200px" />
+            <img src="xenowonder02.png" alt="placeholder" width="100%" />
             <p>
                 The most important models were prioritized in the beginning, those being the UFO, rock, brick, city, people, barbarian, and pyramid.
             </p>
-            <img src="../../image_placeholder.png" alt="placeholder" height="200px" />
+            <img src="xenowonder03.png" alt="placeholder" width="100%" />
             <p>Here is a image that was taken after the first wave of art assets were imported. The grid was made using Unity&#39;s shader graph. People and barbarian objects were not yet implemented (the artist thought the blocks outs were fine lol).</p>
-            <img src="../../image_placeholder.png" alt="placeholder" height="200px" />
+            <img src="xenowonder04.png" alt="placeholder" width="100%" />
             <p>First iteration of people and barbarians were added shortly after. While the people models were fine, the barbarian models did not look like barbarians. The rocks became thinner so that the brick could stand out more post combination. During this version, rocks depleted in value after combination, so the brick tile object would sit on top of the rock. In the final version, rocks were always destroyed post combination. Dune models were added to act borders while also immersion the player into the desert.</p>
-            <img src="../../image_placeholder.png" alt="placeholder" height="200px" />
+            <img src="xenowonder05.png" alt="placeholder" width="100%" />
             <p>To convey to the player that the pyramid was really being build, different phases of constructions were implemented. </p>
-            <img src="../../image_placeholder.png" alt="placeholder" height="200px" />
+            <img src="xenowonder06.png" alt="placeholder" width="100%" />
             <p>The second iteration of barbarian and people were added. These were much more detailed and had their own animations. All animations were downloaded from Mixamo.</p>
-            <img src="../../image_placeholder.png" alt="placeholder" height="200px" />
+            <img src="xenowonder07.png" alt="placeholder" width="100%" />
             <p>Before this point, the lighting was too basic and made any combination of colors look bland. This was only because the directional light was pointing directly down so that the UFO shadow acted as a marker. After the sun angle was changed, colors were updated, and post-processing was improved, the game looked so much better.</p>
             <div class="note">Cole - Now I realize it, the game looks like it’s set the planet of Arrakis from the DUNE movie. I made the colors and lighting too dark…too cinematic. The game would of benefitted from a brighter and vibrant look. Well that’s what happens when I am in charge of colors…</div>
-            <img src="../../image_placeholder.png" alt="placeholder" height="200px" />
+            <img src="xenowonder08.png" alt="placeholder" width="100%" />
             <p>A marker was added so that player will know what is below the UFO. When the UFO picked up any tileobject, a cool tractor beam effect played. </p>
-            <img src="../../image_placeholder.png" alt="placeholder" height="200px" />
-            <img src="../../image_placeholder.png" alt="placeholder" height="200px" />
+            <img src="xenowonder09.png" alt="placeholder" width="100%" />
+            <img src="xenowonder10.png" alt="placeholder" width="100%" />
             <p>To better convey the mechanics of the combinations, a timer and outcome icon was implemented. The timer appears when a combination starts and represents the amount of time left before the combination ends. When the combination ends, an icon appears indicating the outcome to the player.</p>
 
           </section>
           <section class="section-7" id="section-7">
             <h2>Sound</h2>
-            <img src="../../image_placeholder.png" alt="placeholder" height="200px" />
+            <img src="xenowonder11.png" alt="placeholder" width="100%" />
             <p>
                 In the beginning of the project, all the required sounds were outlined in a spread sheet. Like art, it was important to get sounds into the game early. Some of the first sounds implemented were the UFO flying, pick up, and drop sounds. Afterwards, more sounds were added in batches and were quickly implemented. It’s better to add audio support into to the code as early as possible so that any audio issues are quickly discovered and making significant code changes are less costly. 
             </p>
           </section>
           <section class="section-8" id="section-8">
             <h2>Art and Sound Pipeline</h2>
-            <img src="../../image_placeholder.png" alt="placeholder" height="200px" />
+            <img src="xenowonder12.png" alt="placeholder" width="100%" />
             <p>
                 To implement art and sound assets into the game, prefabs and inspector variables were heavily used. The process was initially convenient, but slowly became a tedious task and slight mess. Making any kind of update meant browsing numerous nested folders and constantly opening different prefabs.    
             </p>
+            <img src="xenowonder13.png" alt="placeholder" width="100%" />
           </section>
           <section class="section-9" id="section-9">
             <h2>Balancing The Game</h2>
@@ -678,10 +691,10 @@ namespace AncientAliens
             <p>The amount of bricks produced per minute is determined by the amount of committed workers multiplied by a 1 minute divided by the combined time of brick production and people production.</p>
             
             <p>The player is likely to lose if they don’t use cities as people production is too slow when combining people together, so they must plan to build cites in the long term. If the player can manage to build two cities, then they can win in under 1 minute and a half. This equation doesn’t take into account the time spent transporting Tileobjects or fighting barbarians since that would overly complicate the model.  </p>
-            <img src="../../image_placeholder.png" alt="placeholder" height="200px" />
+            <img src="xenowonder_spreadsheet_01.png" alt="placeholder" width="100%" />
             <p>Here is a chart that tracks barbarian spawn rate. Since we didn’t expect the game to last for more than 3 minutes, the rate of barbarians was tracked every 20 seconds. The spawn interval decreases exponentially, using the depreciation rate. As the spawn rate decreases, the amount of barbarians that the player must face rises. There is a minimum spawn interval so that the player is not swarmed in the event that the player plays longer than 3 minutes. </p>
-            <img src="../../image_placeholder.png" alt="placeholder" height="200px" />
-            <img src="../../image_placeholder.png" alt="placeholder" height="200px" />
+            <img src="xenowonder_spreadsheet_02.png" alt="placeholder" width="100%" />
+            <img src="xenowonder_spreadsheet_03.png" alt="placeholder" width="100%" />
             <p>After 1 minute, the player has to deal with a barbarian every 15 seconds. If the player hasn’t started the production of a city by this point, the pressure of the barbarians will begin to feel overwhelming.</p>
           </section>
           <section class="section-10" id="section-10">
@@ -690,7 +703,7 @@ namespace AncientAliens
                 Biggest take away from playtesting was the realization that no one knew how to play Xeno-Wonder. The combining mechanic was not obvious and players weren&#39;t experimenting with different combinations. It wasn&#39;t until the final week when the realization sank in but there so many other small details that needed to be addressed, that fixing such a fundamental problem seemed too exhausting. Of course, it was only after the game was released when all of the easy solutions came to mind. 
             </p>
             <p>After the release, tile highlights were added to indicate to the player which TileObjects could be combined with the current held Tileobject. UI is likely the best approach for helping people understand how to play since it pairs abstract logic with a visual sign that is memorizable and more intuitive.</p>
-            <img src="../../image_placeholder.png" alt="placeholder" height="200px" />
+            <img src="xeno-wonder_015_0000.jpg" alt="placeholder" width="100%" />
             <p>A strategy guide was added to the store page, as well as, a list of all the combinations. Although people tend to not read the descriptions before jumping into a game, let alone, whole paragraphs, so this wasn&#39;t an effective way to help players understand the game.</p>
             <p>Combinations list<br>
                 Combine tile objects together to create new tile objects<br>
