@@ -31,6 +31,20 @@ body
     color: rgb(110, 110, 110);
  }
 
+.directory .block-container
+{
+    height: 50px;
+}
+
+.showlines
+{
+    border-style: solid;
+    border-color: #afafaf;
+    border-top-style: none;
+    border-bottom-style: none;
+    border-width: 1px;
+}
+
 .header-right {
     float: right;
 }
@@ -46,6 +60,20 @@ body
 
 .nopadding {
    padding: 0;
+}
+
+.container-lines {
+    position: fixed;
+    height: 100%;
+    border-style: solid;
+    border-color: #afafaf;
+    border-top-style: none;
+    border-bottom-style: none;
+    border-width: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+
 }
 
 
