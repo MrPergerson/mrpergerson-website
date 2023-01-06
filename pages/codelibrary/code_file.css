@@ -1,0 +1,37 @@
+.space {
+    padding-top: 100px;
+}
+
+
+.code-container {
+    border: 1px #2A2C29 solid;
+}
+
+.code-header {
+    padding-top: 200px;
+    border-bottom: 1px #2A2C29 solid;
+}
+
+.code-main {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.file-dir {
+    border-right: 1px #2A2C29 solid;
+}
+
+.file-list
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#code-view
+{
+    white-space: pre;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+
