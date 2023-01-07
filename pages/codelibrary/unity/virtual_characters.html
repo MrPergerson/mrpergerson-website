@@ -8,8 +8,15 @@
     <link rel="stylesheet" href="../code_file.css" />
     <title>Virtual Characters</title>
 
+    <link rel="stylesheet"
+      href="../syntaxthemes/tokyo-night-dark.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
 
     <script src="../js/codeviewer.js"></script>
+    <script>
+        // load default script
+        getCode('../unity/src/PlayerController.cs');
+    </script>
 </head>
 
 <body>
@@ -30,18 +37,18 @@
     <div class="block-container">
         <div class="code-container">
             <div class="code-header">
-                <h2>Virtual Characters</h2>
+                <h1>Virtual Characters</h1>
             </div>
             <div class="code-main">
                 <div class="file-dir">
                     <div class="subheader"></div>
                     <div class="file-list">
-                        <button class="list-item"><p>PlayerController.cs</p></button>
-                        <button class="list-item"><p>TopdownMovement.cs</p></button>
+                        <button onClick="getCode('../unity/src/PlayerController.cs');" class="list-item"><p>PlayerController.cs</p></button>
+                        <button onClick="getCode('../unity/src/TopdownMovement.cs');" class="list-item"><p>TopdownMovement.cs</p></button>
                     </div>
                 </div>
-                <div id="code-view">
-                    <pre></pre>
+                <div class="code-bng hljs">
+                    <pre><code id="code-view" class="language-csharp"></code></pre>
                 </div>
             </div>
         </div>

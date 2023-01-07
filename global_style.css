@@ -80,6 +80,7 @@ body
 
 h1 {
     font-family: 'Abhaya Libre', sans-serif;
+    text-transform: uppercase;
 }
 
 h2,h3 {

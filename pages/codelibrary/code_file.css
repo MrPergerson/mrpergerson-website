@@ -8,13 +8,16 @@
 }
 
 .code-header {
-    padding-top: 200px;
+    font-family: 'Abhaya Libre', sans-serif;
+
+    padding: 5em 0 0.4em 1em;
     border-bottom: 1px #2A2C29 solid;
+    font-size: 2em;
 }
 
 .code-main {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 20% 80%;
 }
 
 .file-dir {
@@ -27,11 +30,27 @@
     flex-direction: column;
 }
 
-#code-view
+.list-item {
+    background-color: inherit;
+    border: none;
+    text-align: left;
+    padding: 0 1em;
+}
+
+.list-item:hover {
+    background-color: #2A2C29;
+    color: #fcfbfb;
+}
+
+.code-bng
 {
-    white-space: pre;
     overflow-x: auto;
     padding: 10px;
+    /*
+    white-space: pre;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #f1f1f1;
+    /*
 }
 
 
