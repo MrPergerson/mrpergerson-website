@@ -85,7 +85,6 @@ h1 {
 
 h2,h3 {
     font-family: 'Nunito Sans', sans-serif;
-    text-transform: uppercase;
 }
 
 h2 {
@@ -94,6 +93,11 @@ h2 {
 
 h3 {
     font-weight: 300;
+}
+
+a {
+    border: 2px #F2F2F2 solid;
+    padding: .2em 0.5em;
 }
 
 p {
