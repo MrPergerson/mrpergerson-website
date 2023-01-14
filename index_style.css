@@ -1,7 +1,7 @@
 .header {
     border-style: solid;
-    border-color: #afafaf;
-    border-width: 1px;
+    border-color: #ececec;
+    border-width: 2px;
     height: 3em;
     background-color: transparent;
     border-top-style: none;
@@ -10,36 +10,25 @@
 .dir {
 
     border-style: solid;
-    border-color: #afafaf;
+    border-color: #ececec;
     background-color: transparent;
     border-top-style: none;
-    border-width: 1px;
+    border-width: 2px;
 }
 
-.container-lines {
-    position: fixed;
-    height: 100%;
-    border-style: solid;
-    border-color: #afafaf;
-    border-top-style: none;
-    border-bottom-style: none;
-    border-width: 1px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -1000;
 
-}
 
 .name {
-    font-size: 6em;
+    font-size: 7em;
     width: 5em;
     margin: 0;
-    margin-bottom: .5em;
+    margin-top: .4em;
 }
 
 .links {
     display: flex;
-    padding-bottom: 1em;
+    padding-bottom: 2em;
+    align-items: center;
 }
 
 .links a {
@@ -49,27 +38,18 @@
     text-decoration: none;
 }
 
-.links a:hover {
-    color: #afafaf;
-    color: #0000c6;
-}
-
 .links--dir h3 {
     margin: 0;
 }
 
 .links--dir a {
-    margin-left: 2em;
-}
-
-.links--dir {
-    font-size: 1.5em;
+    margin-left: 1em;
 }
 
 
 .about {
     display: flex;
-    padding: 1em 1em;
+    padding: 1em 1em 0 1em;
 }
 
 .about--name {
