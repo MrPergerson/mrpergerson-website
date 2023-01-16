@@ -41,8 +41,12 @@ img {
 }
 
 .fixed-container {
-    width: 1000px;
+    width: 1060px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin: auto;
+    border-left: 2px #ececec solid; 
+    border-right: 2px #ececec solid;
 }
 
 .game-container {
@@ -72,9 +76,10 @@ img {
 .website-directory {
     
     background-color: white;
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
     z-index: 100;
+    border-bottom: 2px #ececec solid;
 }
 
 .website-directory  a {
@@ -96,6 +101,16 @@ img {
 
 .website-directory__links a {
     padding-left: 2em;
+}
+
+.showlines
+{
+    height: 52px;
+    border-style: solid;
+    border-color: #ececec;
+    border-top-style: none;
+    border-bottom-style: none;
+    border-width: 2px;
 }
 
 .page-wrapper {
@@ -137,4 +152,20 @@ main {
 .sidebar {
     grid-column: 2;
     grid-row: 1 / 4;
+}
+
+.wrapper {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 20px;
+    /* top: 80px;*/
+}
+
+li {
+    margin-bottom: 5px;
+
+}
+
+li a {
+    text-decoration: none;
 }
