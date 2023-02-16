@@ -120,7 +120,7 @@ img {
     grid-template-columns: 70% auto;
     grid-template-rows: auto 1fr 1fr;
 
-    padding-top: 100px;
+    /*padding-top: 100px;*/
     
 }
 
@@ -168,4 +168,27 @@ li {
 
 li a {
     text-decoration: none;
+}
+
+.play-me {
+    background-color: #ececec;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.play-me a {
+    display: inline-block;
+    padding: 20px;
+    background-color: rgb(15, 15, 15);
+    color: white;
+    text-decoration: none;
+    
+}
+
+.play-me a:hover {
+
+    background-color: rgb(48, 48, 48);
+
+    
 }
