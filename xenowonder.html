@@ -5,12 +5,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../../article.css" />
+  <link rel="stylesheet" href="article.css" />
   <title>Mr. Pergerson</title>
 </head>
+<script src="js/jquery.min.js"></script>
+<script src="js/page.js"></script>
 <style>
   #hero-image {
-    background-image: url('xeno-wonder_003_0000.jpg');
+    background-image: url('pages/gamedesign/xenowonder/xeno-wonder_003_0000.jpg');
   }
 
   body {
@@ -20,12 +22,14 @@
 
 <body>
 
-  <div class="website-directory">
+  <div class="directory">
     <div class="fixed-container showlines">
-      <a href="../../../index.html">MR. PERGERSON</a>
-      <div class="website-directory__links">
-        <a href="../../gamedesign.html">RETURN TO GAME DESIGN</a>
+      <a href="index.html" class="logo">MR. PERGERSON</a>
+      <div class="header-right" id="dirLinks">
+        <a href="gamedesign.html">GAME DESIGN</a>
+        <a href="bio.html">BIO</a>
       </div>
+      <a href="javascript:void(0);" class="header-mobile" onclick="toggleMobileDirectory()"><img src="../site_images/icon_menu.png" alt="" srcset=""></a>
     </div>
   </div>
 
@@ -113,7 +117,7 @@
             you play as common game ideas, like an explosive barrel. Through a vote, we settled on the first idea and
             began sketching.
           </p>
-          <img src="xenowonder00.png" alt="placeholder" width="100%" />
+          <img src="pages/gamedesign/xenowonder/xenowonder00.png" alt="placeholder" width="100%" />
           <p>Here is an early blender sketch to visual what we were imagining. Besides the camera angle, the sketch
             closely resembles what the final game ended up looking like.</p>
           <p>
@@ -125,7 +129,7 @@
             - If the pyramid build progress is set to 0%, the player loses.<br>
             - When barbarians combine with the pyramid, build progress depletes.<br>
           </p>
-          <img src="xenowonder_brainstorming_01.png" alt="placeholder" width="100%" />
+          <img src="pages/gamedesign/xenowonder/xenowonder_brainstorming_01.png" alt="placeholder" width="100%" />
           <p>
             To generate ideas, we used a matrix to list all of the possible combinations. We had a fun imagining how
             this game could play out as a simple civilization-like game. To simply the scope, we chose the most
@@ -140,7 +144,7 @@
         </section>
         <section class="section-4" id="section-4">
           <h2>Dialing in the MVP</h2>
-          <img src="xenowonder_brainstorming_02.png" alt="placeholder" width="100%" />
+          <img src="pages/gamedesign/xenowonder/xenowonder_brainstorming_02.png" alt="placeholder" width="100%" />
           <p>
             Priority Verbs<br>
             - Combine: Two object are placed together and an output is created after X time<br>
@@ -168,16 +172,16 @@
           <p>Here is a image that was taken after the first wave of art assets were imported. The grid was made using
             Unity&#39;s shader graph. People and barbarian objects were not yet implemented (the artist thought the
             blocks outs were fine lol).</p>
-          <img src="xenowonder03.png" alt="placeholder" width="100%" />
+          <img src="pages/gamedesign/xenowonder/xenowonder03.png" alt="placeholder" width="100%" />
           <p>First iteration of people and barbarians were added shortly after. While the people models were fine, the
             barbarian models did not look like barbarians. The rocks became thinner so that the brick could stand out
             more post combination. During this version, rocks depleted in value after combination, so the brick tile
             object would sit on top of the rock. In the final version, rocks were always destroyed post combination.
             Dune models were added to act borders while also immersion the player into the desert.</p>
-          <img src="xenowonder05.png" alt="placeholder" width="100%" />
+          <img src="pages/gamedesign/xenowonder/xenowonder05.png" alt="placeholder" width="100%" />
           <p>To convey to the player that the pyramid was really being build, different phases of constructions were
             implemented. </p>
-            <img src="xenowonder07.png" alt="placeholder" width="100%" />
+            <img src="pages/gamedesign/xenowonder/xenowonder07.png" alt="placeholder" width="100%" />
             <p>The second iteration of barbarian and people were added. These were much more detailed and had their own
             animations. All animations were downloaded from Mixamo.</p>
           <p>Before this point, the lighting was too basic and made any combination of colors look bland. This was only
@@ -187,15 +191,15 @@
           <div class="note">Cole - Now I realize it, the game looks like it&#39;s set the planet of Arrakis from the DUNE
             movie. I made the colors and lighting too dark…too cinematic. The game would of benefitted from a brighter
             and vibrant look. Well that&#39;s what happens when I am in charge of colors…</div>
-            <img src="xeno-wonder_012_0000.jpg" alt="placeholder" width="100%" />
+            <img src="pages/gamedesign/xenowonder/xeno-wonder_012_0000.jpg" alt="placeholder" width="100%" />
             <p>A marker was added so that player will know what is below the UFO. When the UFO picked up any tileobject, a
               cool tractor beam effect played. </p>
-              <img src="xeno-wonder_016_0000.jpg" alt="placeholder" width="100%" />
+              <img src="pages/gamedesign/xenowonder/xeno-wonder_016_0000.jpg" alt="placeholder" width="100%" />
             <p>To better convey the mechanics of the combinations, a timer and outcome icon was implemented. The timer
               appears when a combination starts and represents the amount of time left before the combination ends. When
               the combination ends, an icon appears indicating the outcome to the player.</p>
-          <img src="xenowonder09.png" alt="placeholder" width="100%" />
-          <img src="xenowonder10.png" alt="placeholder" width="100%" />
+          <img src="pages/gamedesign/xenowonder/xenowonder09.png" alt="placeholder" width="100%" />
+          <img src="pages/gamedesign/xenowonder/xenowonder10.png" alt="placeholder" width="100%" />
 
         </section>
         <section class="section-9" id="section-9">
@@ -286,14 +290,14 @@ namespace AncientAliens
             people together, so they must plan to build cites in the long term. If the player can manage to build two
             cities, then they can win in under 1 minute and a half. This equation doesn&#39t take into account the time
             spent transporting Tileobjects or fighting barbarians since that would overly complicate the model. </p>
-          <img src="xenowonder_spreadsheet_01.png" alt="placeholder" width="100%" />
+          <img src="pages/gamedesign/xenowonder/xenowonder_spreadsheet_01.png" alt="placeholder" width="100%" />
           <p>Here is a chart that tracks barbarian spawn rate. Since we didn&#39t expect the game to last for more than 3
             minutes, the rate of barbarians was tracked every 20 seconds. The spawn interval decreases exponentially,
             using the depreciation rate. As the spawn rate decreases, the amount of barbarians that the player must face
             rises. There is a minimum spawn interval so that the player is not swarmed in the event that the player
             plays longer than 3 minutes. </p>
-          <img src="xenowonder_spreadsheet_02.png" alt="placeholder" width="100%" />
-          <img src="xenowonder_spreadsheet_03.png" alt="placeholder" width="100%" />
+          <img src="pages/gamedesign/xenowonder/xenowonder_spreadsheet_02.png" alt="placeholder" width="100%" />
+          <img src="pages/gamedesign/xenowonder/xenowonder_spreadsheet_03.png" alt="placeholder" width="100%" />
           <p>After 1 minute, the player has to deal with a barbarian every 15 seconds. If the player hasn&#39t started the
             production of a city by this point, the pressure of the barbarians will begin to feel overwhelming.</p>
         </section>
@@ -309,7 +313,7 @@ namespace AncientAliens
           <p>After the release, tile highlights were added to indicate to the player which TileObjects could be combined
             with the current held Tileobject. UI is likely the best approach for helping people understand how to play
             since it pairs abstract logic with a visual sign that is memorizable and more intuitive.</p>
-          <img src="xeno-wonder_015_0000.jpg" alt="placeholder" width="100%" />
+          <img src="pages/gamedesign/xenowonder/xeno-wonder_015_0000.jpg" alt="placeholder" width="100%" />
           <p>A strategy guide was added to the store page, as well as, a list of all the combinations. Although people
             tend to not read the descriptions before jumping into a game, let alone, whole paragraphs, so this
             wasn&#39;t an effective way to help players understand the game.</p>

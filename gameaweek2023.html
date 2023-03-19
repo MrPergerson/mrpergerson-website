@@ -5,12 +5,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../../article.css" />
+  <link rel="stylesheet" href="article.css" />
   <title>Mr. Pergerson</title>
 </head>
+<script src="js/jquery.min.js"></script>
+<script src="js/page.js"></script>
 <style>
   #hero-image {
-    background-image: url('asteroids_01.png');
+    background-image: url('pages/gamedesign/gameaweek2023/asteroids_01.png');
   }
 
   body {
@@ -20,12 +22,14 @@
 
 <body>
 
-  <div class="website-directory">
+  <div class="directory">
     <div class="fixed-container showlines">
-      <a href="../../../index.html">MR. PERGERSON</a>
-      <div class="website-directory__links">
-        <a href="../../gamedesign.html">RETURN TO GAME DESIGN</a>
+      <a href="index.html" class="logo">MR. PERGERSON</a>
+      <div class="header-right" id="dirLinks">
+        <a href="gamedesign.html">GAME DESIGN</a>
+        <a href="bio.html">BIO</a>
       </div>
+      <a href="javascript:void(0);" class="header-mobile" onclick="toggleMobileDirectory()"><img src="../site_images/icon_menu.png" alt="" srcset=""></a>
     </div>
   </div>
 
@@ -83,7 +87,7 @@
             There is no challenge in pursuing the goal so I don't consider this to be a game, but it was fun first project for the Playdate console.
           </p>
           <p>Theme: Pattern | Platform: Playdate</p>
-          <img src="circle_gameplay.gif" alt="circle gameplay" width="400px" />
+          <img src="pages/gamedesign/gameaweek2023/circle_gameplay.gif" alt="circle gameplay" width="400px" />
         </section>
         <section class="section-4" id="section-4">
           <h2>Asteroids</h2>
@@ -91,7 +95,7 @@
             This week I made an asteroids game. My challenge was to use the crank as a primary input, so I used it for rotation. I tied movement to shooting to make the game easier to play with the crank. Sadly I wasn't able fully flesh out the idea in time, as development took longer than expected and I waited until the end to solve design issues
           </p>
           <p>Theme: Crank To Turn | Platform: Playdate</p>
-          <img src="pdasteroid_gameplay.gif" alt="asteroids gameplay" width="400px" />
+          <img src="pages/gamedesign/gameaweek2023/pdasteroid_gameplay.gif" alt="asteroids gameplay" width="400px" />
         </section>
       </article>
       <footer>

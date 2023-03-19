@@ -35,13 +35,12 @@ p{
     margin-top: 0;
 }
 
-img {
+.page-wrapper img {
     margin-top: 2em;
     margin-bottom: 2em;
 }
 
 .fixed-container {
-    width: 1060px;
     padding-left: 20px;
     padding-right: 20px;
     margin: auto;
@@ -73,44 +72,47 @@ img {
     border-width: 1px;
 }
 
-.website-directory {
-    
-    background-color: white;
-    /* position: fixed; */
+.directory {
+    top: 0;
+    background-color: #fcfbfb;
+    position: fixed;
     width: 100%;
     z-index: 100;
+    font-family: 'Nunito Sans', sans-serif;
     border-bottom: 2px #ececec solid;
 }
 
-.website-directory  a {
+.directory a {
     text-align: center;
-    padding: 14px 0px;
+    padding: 14px;
     text-decoration: none;
     float:left;
     color: black;
     text-transform: uppercase;
 }
 
-.website-directory  a:hover {
+.directory a:hover {
     color: rgb(110, 110, 110);
  }
 
- .website-directory__links{
-    float: right;
-}
-
-.website-directory__links a {
-    padding-left: 2em;
-}
-
 .showlines
 {
-    height: 52px;
     border-style: solid;
     border-color: #ececec;
     border-top-style: none;
     border-bottom-style: none;
     border-width: 2px;
+}
+
+.header-right {
+    float: right;
+}
+
+.header-mobile {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 .page-wrapper {
@@ -119,7 +121,7 @@ img {
     gap: 2em;
     grid-template-columns: 70% auto;
     grid-template-rows: auto 1fr 1fr;
-
+    margin-top: 3em;
     /*padding-top: 100px;*/
     
 }
@@ -192,3 +194,47 @@ li a {
 
     
 }
+
+
+@media only screen and (max-width: 600px) {
+    .page-wrapper {
+        display: block;
+        margin-top: 4em;
+    }
+
+    .directory a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+      
+      .header-right {
+        float: none;
+        display: none;
+      }
+
+ }
+
+ @media only screen and (min-width: 600px) {
+    .header-right {
+        display: block;
+    }
+
+    .header-mobile {
+        display: none;
+    }
+
+}
+
+
+ @media only screen and (min-width: 1200px) {
+    .fixed-container
+    {
+        width: 1060px;
+    }
+
+    .showlines
+    {
+        height: 50px;
+    }
+ }

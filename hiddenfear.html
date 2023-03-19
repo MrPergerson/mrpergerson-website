@@ -5,12 +5,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../../article.css" />
+  <link rel="stylesheet" href="article.css" />
   <title>Mr. Pergerson</title>
 </head>
+<script src="js/jquery.min.js"></script>
+<script src="js/page.js"></script>
 <style>
   #hero-image {
-    background-image: url('hiddenfear_banner_02.png');
+    background-image: url('pages/gamedesign/hiddenfear/hiddenfear_banner_02.png');
   }
 
   body {
@@ -20,12 +22,14 @@
 
 <body>
 
-  <div class="website-directory">
+  <div class="directory">
     <div class="fixed-container showlines">
-      <a href="../../../index.html">MR. PERGERSON</a>
-      <div class="website-directory__links">
-        <a href="../../gamedesign.html">RETURN TO GAME DESIGN</a>
+      <a href="index.html" class="logo">MR. PERGERSON</a>
+      <div class="header-right" id="dirLinks">
+        <a href="gamedesign.html">GAME DESIGN</a>
+        <a href="bio.html">BIO</a>
       </div>
+      <a href="javascript:void(0);" class="header-mobile" onclick="toggleMobileDirectory()"><img src="../site_images/icon_menu.png" alt="" srcset=""></a>
     </div>
   </div>
 
@@ -120,7 +124,7 @@
           </p>
           <p>Here is a rough sketch I made using Unity</p>
           <video width="100%" controls>
-            <source src="movie_004.mp4" type="video/mp4">
+            <source src="pages/gamedesign/hiddenfear/movie_004.mp4" type="video/mp4">
           Your browser does not support the video tag.
           </video> 
         </section>
@@ -139,7 +143,7 @@
           <p>
             I usually like to start out by outlining the important variables I want to have access to in the code.
           </p>
-          <img src="hiddenfear_02.png" alt="placeholder" width="100%" />
+          <img src="pages/gamedesign/hiddenfear/hiddenfear_02.png" alt="placeholder" width="100%" />
           <p>
             Here are all the upgrades I came up with. In the story, I wanted to the character to have to replace their
             organic body with cybernetic parts just to be powerful enough to escape. These cybernetic upgrades would
@@ -151,21 +155,20 @@
             would feel like a rip-off and their effects would likely not be felt. Each upgrade increase a certain stat
             and the player&#39s power rating.
           </p>
-          <img src="hiddenfear_03.png" alt="placeholder" width="100%" />
+          <img src="pages/gamedesign/hiddenfear/hiddenfear_03.png" alt="placeholder" width="100%" />
           <p>
             An automatic leveling up system didn&#39t make sense for Hidden Fear, so instead the player purchases
             character and weapon upgrades that increases a power rating (PR). The higher the PR, the more damage they
             deal. Originally I had an upgrade that increased damage, but I figured players would always get that one, so
             I gave the damage boost for free as a reward for investing in to their PR.
           </p>
-          <img src="hiddenfear_04.png" alt="placeholder" width="100%" />
+          <img src="pages/gamedesign/hiddenfear/hiddenfear_04.png" alt="placeholder" width="100%" />
           <p>
             There are 10 different weapons that the player can experiment with. Most weapons use different ammo types to
             encourage the player to try all the weapons. I knew these numbers needed to be tested and would likely need
             to be changed, but I charted them anyways as a starting point. Anyone looking at this chart will have an
             idea of how the weapons are differentiated from another.
           </p>
-          <img src="" alt="placeholder" width="100%" />
         </section>
         <section class="section-6" id="section-6">
           <h2>Mission Difficulty</h2>
@@ -185,7 +188,7 @@
             many variables to consider and I didn&#39t know how to even begin. In the google sheets, you can see my
             attempts.
           </p>
-          <img src="hiddenfear_05.png"placeholder" width="100%" />
+          <img src="pages/gamedesign/hiddenfear/hiddenfear_05.png"placeholder" width="100%" />
         </section>
         <section class="section-7" id="section-7">
           <h2>Alien Types</h2>
@@ -197,7 +200,7 @@
             Spitters try to blind the player and reduce fire accuracy. Big Aliens are tanks that have high health and
             damage but are slow to move
           </p>
-          <img src="hiddenfear_06.png" alt="placeholder" width="100%" />
+          <img src="pages/gamedesign/hiddenfear/hiddenfear_06.png" alt="placeholder" width="100%" />
         </section>
         <section class="section-8" id="section-8">
           <h2>Was It Fun?</h2>

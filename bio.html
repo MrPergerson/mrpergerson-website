@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="work_style.css" />
     <title>Mr. Pergerson</title>
   </head>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/page.js"></script>
   <style>
     #image4 {
       background-image: url("../site_images/cole_2.jpg");
@@ -19,16 +21,14 @@
     </div>
 
     <div class="directory">
-        <div class="block-container showlines">
-            <a href="../index.html">MR. PERGERSON</a>
-            <div class="header-right">
-                <a href="gamedesign.html">GAME DESIGN</a>
-                <a href="about.html">BIO</a>
-                <!--<a href="writing.html">WRITING</a>-->
-                <!--<a href="codelibrary.html">CODE</a>-->
-                <!--<a href="webdev.html">WEB DEVELOPMENT</a>-->
-            </div>
+      <div class="block-container showlines">
+        <a href="../index.html" class="logo">MR. PERGERSON</a>
+        <div class="header-right" id="dirLinks">
+          <a href="gamedesign.html">GAME DESIGN</a>
+          <a href="bio.html">BIO</a>
         </div>
+        <a href="javascript:void(0);" class="header-mobile" onclick="toggleMobileDirectory()"><img src="../site_images/icon_menu.png" alt="" srcset=""></a>
+      </div>
     </div>
     <header>
         <div class="block-container">
