@@ -195,6 +195,17 @@ li a {
     
 }
 
+.video {
+    display: block;
+    width: 560px;
+    height: 315px;
+    padding-bottom: 1em;
+}
+
+.playdate {
+    width: 400px;
+    height: 240px;
+}
 
 @media only screen and (max-width: 600px) {
     .page-wrapper {
@@ -213,6 +224,16 @@ li a {
         display: none;
       }
 
+    .video {
+        display: block;
+        width: 100%;
+    }
+
+    .playdate {
+        width: 300px;
+        height: 180px;
+    }
+    
  }
 
  @media only screen and (min-width: 600px) {
@@ -223,6 +244,9 @@ li a {
     .header-mobile {
         display: none;
     }
+
+
+    
 
 }
 
